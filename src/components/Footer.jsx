@@ -6,7 +6,7 @@ function Footer() {
   <div className="footer container">
     <div className="brand">
       <h1>
-        <span>S</span>haif <span>A</span>rfan
+        <span>E</span>SRAA <span>T</span>AREK
       </h1>
     </div>
     <h2>Your Complete Web Solution</h2>
@@ -32,7 +32,7 @@ function Footer() {
         </a>
       </div>
     </div>
-    <p>Copyright © 2020 Arfan. All rights reserved</p>
+    <p>Copyright © 2020 Esraa. All rights reserved</p>
   </div>
 </section>
   )

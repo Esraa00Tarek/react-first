@@ -58,132 +58,114 @@
   margin: auto;
   color: #444;
 }
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
 
-@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-html {
-	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
-	scroll-behavior: smooth;
-}
-a {
-	text-decoration: none;
-}
-.container {
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-}
-p {
-	color: black;
-	font-size: 1.4rem;
-	margin-top: 5px;
-	line-height: 2.5rem;
-	font-weight: 300;
-	letter-spacing: 0.05rem;
-}
-.section-title {
-	font-size: 4rem;
-	font-weight: 300;
-	color: black;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-	text-align: center;
-}
-.section-title span {
-	color: crimson;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.cta {
-	display: inline-block;
-	padding: 10px 30px;
-	color: white;
-	background-color: transparent;
-	border: 2px solid crimson;
-	font-size: 2rem;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	margin-top: 30px;
-	transition: 0.3s ease;
-	transition-property: background-color, color;
+html {
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
-.cta:hover {
-	color: white;
-	background-color: crimson;
+
+a {
+  text-decoration: none;
 }
-.brand h1 {
-	font-size: 3rem;
-	text-transform: uppercase;
-	color: white;
-}
-.brand h1 span {
-	color: crimson;
-}
-#services .services {
-  flex-direction: column;
-  text-align: center;
-  max-width: 1500px;
+
+.container {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 60px 20px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+p {
+  color: black;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.section-title span {
+  color: crimson;
+}
+
+#services .services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 #services .service-top {
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 700px;
 }
 
 #services .service-bottom {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 50px;
+  gap: 20px;
 }
 
 #services .service-item {
-  flex-basis: 80%;
+  flex: 1 1 calc(45% - 20px);
+  max-width: 45%;
+  min-width: 280px;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
   flex-direction: column;
+  align-items: flex-start;
   padding: 30px;
   border-radius: 10px;
-  background-image: url(./img/img-1.png);
+  background-image: url('./img/img-1.png');
   background-size: cover;
-  margin: 10px 5%;
+  background-position: center;
   position: relative;
-  z-index: 1;
   overflow: hidden;
+  z-index: 1;
 }
 
 #services .service-item::after {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
+  inset: 0;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   opacity: 0.9;
   z-index: -1;
 }
 
-#services .service-bottom .icon {
+#services .icon {
   height: 80px;
   width: 80px;
   margin-bottom: 20px;
+}
+
+#services .icon img {
+  height: 100%;
+  width: 100%;
 }
 
 #services .service-item h2 {
@@ -195,43 +177,132 @@ p {
 
 #services .service-item p {
   color: white;
+  font-size: 1.4rem;
   text-align: left;
 }
 
+@media (max-width: 768px) {
+  #services .service-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+#contact .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 60px 0;
+}
+
+#contact .contact-items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+#contact .contact-item {
+  flex: 1 1 300px;
+  max-width: 300px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 18px 0 rgba(0, 0, 0, 0.17);
+  transition: box-shadow 0.3s ease;
+}
+
+#contact .contact-item:hover {
+  box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.17);
+}
+
+#contact .icon {
+  width: 70px;
+  margin: 0 auto 10px auto;
+}
+
+#contact .icon img {
+  width: 100%;
+  height: auto;
+}
+
+#contact .contact-info h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+#contact .contact-info h2 {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
 #footer {
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: white;
+  padding: 50px 20px 20px;
+  text-align: center;
 }
+
 #footer .footer {
-	min-height: 200px;
-	flex-direction: column;
-	padding-top: 50px;
-	padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
+
+#footer .brand h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+#footer .brand h1 span {
+  color: #00c3ff; /* Accent color */
+}
+
 #footer h2 {
-	color: white;
-	font-weight: 500;
-	font-size: 1.8rem;
-	letter-spacing: 0.1rem;
-	margin-top: 10px;
-	margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
+  margin: 10px 0;
 }
+
 #footer .social-icon {
-	display: flex;
-	margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
+
 #footer .social-item {
-	height: 50px;
-	width: 50px;
-	margin: 0 5px;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  border-radius: 50%;
 }
+
 #footer .social-item img {
-	filter: grayscale(1);
-	transition: 0.3s ease filter;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: filter 0.3s ease;
 }
+
 #footer .social-item:hover img {
-	filter: grayscale(0);
+  filter: grayscale(0);
 }
+
 #footer p {
-	color: white;
-	font-size: 1.3rem;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  color: #ddd;
 }
